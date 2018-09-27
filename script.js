@@ -1,4 +1,9 @@
-d3.csv('data.csv',function (data) {
+function doFunction(file){
+  console.log(file);
+  var reader = new FileReader();
+  reader.onload = function(event){
+    console.log(event.target.result);
+      d3.csv(event.target.result,function (data) {
 // CSV section
   var body = d3.select('body')
   var selectData = [ { "text" : "Annualized Return" },
@@ -168,3 +173,7 @@ d3.csv('data.csv',function (data) {
         .attr('cx',function (d) { return xScale(d[value]) })
   }
 })
+  }
+  reader.readAsDataURL(file);
+
+}
