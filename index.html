@@ -6,17 +6,25 @@
     <link rel='stylesheet' href='style.css'>
   </head>
   <body>
-  	<h1>heyo</h1>
-  	<script>console.log("jajajajaja");</script>
+  	<h1>CSV file reader</h1>
     <script type='text/javascript' src='script.js'></script>
+    <script type='text/javascript' src='morescript.js'></script>
     <input type="file" id="myFile">
-    <button onclick="myFunction()">Try it</button>
-
+    <button onclick="fileFunction()">Use file</button>
+    <br />
+    <input type="text" id="url" name="url" />
+    <button onclick="urlFunction()">Use URL</button><!--Annen funksjon når klar!-->
+    <br />
     <script>
-    	function myFunction(){
-    		var test = document.getElementById("myFile").files[0];
-    		doFunction(test);
+    	function fileFunction(){
+    		var file = document.getElementById("myFile").files[0];
+    		readFile(file);
     	}
+      function urlFunction(){
+        var Url = document.getElementById("url");
+        console.log(Url);
+        readURL(Url);
+      }
     </script>
   </body>
 </html>
