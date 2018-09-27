@@ -1,8 +1,9 @@
 function readURL(url){
     console.log(url);
-    
-    
-    d3.csv(url,function (data) {
+    let inputUrl = '\'' + url + '\'';
+    console.log(inputUrl);
+    //"http://learnjsdata.com/data/cities.csv"
+    d3.csv(inputUrl,function (data) {
 // CSV section
 
   var body = d3.select('body');
