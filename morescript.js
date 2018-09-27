@@ -175,7 +175,5 @@ function readURL(url){
         .attr('cx',function (d) { return xScale(d[value]) })
   }
 });
-    }
-    reader.readAsDataURL(file);
-
 }
+    
